@@ -3,8 +3,8 @@ package essentials.frameworks.game;
 import java.awt.Dimension;
 import java.awt.image.DataBufferInt;
 
-import essentials.tools.containers.Frame;
 import essentials.tools.containers.graphics.images.BufferedImage;
+import essentials.tools.containers.orginal.Frame;
 
 public abstract class GameBase implements Runnable {
 

@@ -1,8 +1,8 @@
 package essentials.frameworks.application;
 
-import essentials.tools.containers.Frame;
-import essentials.tools.containers.Panel;
-import essentials.tools.containers.components.MenuBar;
+import essentials.tools.containers.orginal.Frame;
+import essentials.tools.containers.orginal.Panel;
+import essentials.tools.containers.orginal.components.MenuBar;
 
 public class BasicApplication {
 
@@ -21,7 +21,7 @@ public class BasicApplication {
 
 	protected void addMenu() {
 		menubar = new MenuBar(MenuBar.Skin.skin1);
-		frame.add(menubar);
+		//frame.add(menubar);
 	}
 
 }
