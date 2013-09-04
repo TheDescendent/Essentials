@@ -1,6 +1,5 @@
 package essentials.tools.containers.orginal.components;
 
-import java.awt.Graphics;
 import java.util.ArrayList;
 
 import essentials.frameworks.game.tools.Sprite;

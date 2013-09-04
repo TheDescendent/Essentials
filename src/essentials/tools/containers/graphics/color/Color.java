@@ -48,12 +48,18 @@ public class Color extends java.awt.Color {
 		String red = Integer.toHexString(color.getRed());
 		String green = Integer.toHexString(color.getGreen());
 		String blue = Integer.toHexString(color.getBlue());
+
 		@SuppressWarnings("unused")
 		String alpha = Integer.toHexString(color.getAlpha());
+
 		if (red.length() < 2) red += "0";
 		if (green.length() < 2) green += "0";
 		if (blue.length() < 2) blue += "0";
-		return Integer.parseInt(red + green + blue, 16);
 
+		return Integer.parseInt(red + green + blue, 16);
+	}
+
+	public static java.awt.Color toAwtColor(Color gray) {
+		return new java.awt.Color(gray.getRed(), gray.getGreen(), gray.getBlue());
 	}
 }

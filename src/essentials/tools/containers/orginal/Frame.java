@@ -1,5 +1,6 @@
 package essentials.tools.containers.orginal;
 
+import java.awt.Canvas;
 import java.awt.Graphics;
 
 import javax.imageio.ImageIO;
@@ -22,6 +23,21 @@ public class Frame extends JFrame {
 
 	/*****************************************************************
 	 * 
+	 * initialization
+	 * 
+	 *****************************************************************/
+
+	public void init(Canvas main, String title) {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		add(main);
+		pack();
+		setLocationRelativeTo(null);
+		setTitle(title);
+		setVisible(true);
+	}
+
+	/*****************************************************************
+	 * 
 	 * GUI rendering
 	 * 
 	 *****************************************************************/
@@ -40,7 +56,7 @@ public class Frame extends JFrame {
 	}
 
 	private void renderMenuBar() {
-		
+
 	}
 
 	private void renderBackground() {
