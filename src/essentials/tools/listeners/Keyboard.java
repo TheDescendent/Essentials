@@ -1,5 +1,32 @@
 package essentials.tools.listeners;
 
-public class Keyboard {
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+public abstract class Keyboard implements KeyListener {
+
+	public boolean[] keys = new boolean[200];
+	public boolean up, down, left, right;
+
+	public abstract void update();
+
+	public void updateDefaultKeys() {
+		up = keys[KeyEvent.VK_UP] || keys[KeyEvent.VK_W];
+		down = keys[KeyEvent.VK_DOWN] || keys[KeyEvent.VK_S];
+		left = keys[KeyEvent.VK_LEFT] || keys[KeyEvent.VK_A];
+		right = keys[KeyEvent.VK_RIGHT] || keys[KeyEvent.VK_D];
+	}
+
+	public void keyPressed(KeyEvent e) {
+		keys[e.getKeyCode()] = true;
+	}
+
+	public void keyReleased(KeyEvent e) {
+		keys[e.getKeyCode()] = false;
+	}
+
+	public void keyTyped(KeyEvent e) {
+
+	}
 
 }
